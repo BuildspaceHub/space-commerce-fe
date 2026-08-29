@@ -3,7 +3,7 @@
 :root {
   /* colors */
   --brand: #2563eb;
-  --background: ##ffffff;
+  --background: #ffffff;
   --foreground: #171717;
   --card-background: #f7f8fa;
   /* Typograph */
@@ -22,11 +22,11 @@
   --color-brand: var(--brand);
   --color-card-background: var(--card-background);
   --text-large: var(--text-large);
-  --text-medium: var(--text-large);
+  --text-medium: var(--text-medium);
   --text-regular: var(--text-regular);
   --text-caption: var(--text-caption);
   --font-poppins: var(--font-poppins);
-  --radius-card-redius: var(--card-radius);
+  --radius-card: var(--card-radius);
 }
 
 /* BASE STYLE */
