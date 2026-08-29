@@ -3,7 +3,7 @@
 :root {
   /* colors */
   --brand: #2563eb;
-  --background: ##ffffff;
+  --background: #ffffff;
   --foreground: #171717;
   --card-background: #f7f8fa;
   /* Typograph */
@@ -34,4 +34,18 @@
   body {
     @apply bg-background text-foreground font-poppins;
   }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
 }
