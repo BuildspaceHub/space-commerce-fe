@@ -3,9 +3,10 @@
 :root {
   /* colors */
   --brand: #2563eb;
-  --background: ##ffffff;
+  --background: #ffffff;
   --foreground: #171717;
   --card-background: #f7f8fa;
+  --neutral: #757575;
   /* Typograph */
   --text-large: 20px;
   --text-medium: 16px;
@@ -20,6 +21,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-brand: var(--brand);
+  --color-neutral: var(--neutral);
   --color-card-background: var(--card-background);
   --text-large: var(--text-large);
   --text-medium: var(--text-large);
@@ -27,6 +29,7 @@
   --text-caption: var(--text-caption);
   --font-poppins: var(--font-poppins);
   --radius-card-redius: var(--card-radius);
+  
 }
 
 /* BASE STYLE */
