@@ -26,11 +26,14 @@ export default function CategoryList({ name }: CategoryListProp) {
       ) : (
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`text-left relative flex justify-between w-full items-center gap-2 hover:bg-neutral/16 rounded-md py-1 px-4`}
+          className={`text-left relative flex justify-between
+             w-full items-center gap-2 md:gap-6  hover:bg-neutral/16 rounded-md py-1 px-4 `}
         >
           <p className="">{name}</p>
           {/* <img src={imageSrc} alt={name} width={8} height={24} className="scale-x-[-1] "/> */}
-          <RiArrowRightSLine className="text-normal" />
+          <div className="md:hidden">
+            <RiArrowRightSLine className="text-normal" />
+          </div>
 
           {/* {isOpen ? "" : ""} */}
 

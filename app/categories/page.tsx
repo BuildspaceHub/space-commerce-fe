@@ -104,11 +104,11 @@ export default function page() {
   ];
 
   return (
-    <div className="md:mx-21 md:mt-8 relative min-h-screen flex flex-col  ">
+    <div className="md:mx-16 md:mt-2 relative min-h-screen flex flex-col  ">
       {/* Both Headers */}
       <div className="sticky top-0 bg-background z-1">
         {/* Header For Mobile */}
-        <div className="sticky grid grid-col-1 mx-4 md:hidden gap-4 top-0 ">
+        <div className="sticky grid grid-col-1 mx-4 md:hidden gap-4 top-0 py-2">
           <header className="sticky top-0 flex gap-3 bg-background w-full pt-2.5">
             <img
               src="ForCategories/icons/back-arrow.png"
@@ -121,12 +121,12 @@ export default function page() {
           <input
             type="text"
             placeholder="Search Categories"
-            className="px-10  border border-neutral w-full rounded-full text-text-caption  bg-[url('/ForCategories/icons/Search.png')] bg-size-[16px_16px] bg-no-repeat bg-position-[10px_center] focus:outline-none "
+            className="px-10 h-10 border border-neutral/50 w-full rounded-full text-text-caption  bg-[url('/ForCategories/icons/Search.png')] bg-size-[16px_16px] bg-no-repeat bg-position-[10px_center] focus:outline-none "
           />
         </div>
 
         {/* Header For Desktop*/}
-        <header className=" sticky items-center top-0 justify-between gap-2 bg-background w-full py-2.5 hidden md:flex border-b border-neutral/40">
+        <header className=" sticky items-center top-0 justify-between gap-2 bg-background w-full py-2.5 pb-4 mb-2  hidden md:flex border-b border-neutral/40">
           {/* Space-Logo */}
           <div className="flex items-center gap-2.5">
             <img
@@ -182,14 +182,14 @@ export default function page() {
       </div>
 
       <main className=" flex flex-col">
-        <p className="text-large md:text-[28px] font-medium md:font-bold md:pb-6 md:pt-4 pt-4 mx-4">
+        <p className="text-large md:text-[28px] font-medium md:font-bold md:pb-6 md:pt-4 pt-4 mx-4 md:mx-0">
           Browse All Categories
         </p>
 
         {/* Browse Categories and Category List */}
         {/* Browse Categories */}
-        <div className="mx-4 md:mx-0 py-4 md:pt-0 flex flex-col md:justify-between md:w-full md:flex-row-reverse gap-4 md:gap-10 ">
-          <div className="md:flex md:flex-col md:gap-10 md:border-l md:border-neutral/50 md:pl-8">
+        <div className="mx-4 md:mx-0 py-4 md:pt-0 flex flex-col md:justify-between md:w-full md:flex-row-reverse gap-4  md:gap-0">
+          <div className="md:flex md:flex-col md:gap-10 md:border-l md:border-neutral/50 md:pl-8 w-full md:w-3-4 lg:w-4/5">
             {/* Subcategory List */}
             <div className="flex flex-col justify-between gap-5 ">
               {/* SubCat Headings */}
@@ -203,16 +203,16 @@ export default function page() {
                 </div>
               </div>
 
-              <ul className="hidden md:grid-cols-3 md:gap-4 md:grid md:list-disc pl-5">
+              <ul className="hidden md:grid-cols-3 md:gap-4 md:gap-x-6 md:grid md:list-disc pl-5">
                 <li>Cell Phones & Accessories</li>
+                <li>Audio & Headphones</li>
+                <li>Smart Home Electronics</li>
+                <li>Computers & Tablets</li>
+                <li>Video Games & Consoles</li>
+                <li>TV & Home Theater</li>
+                <li>Cameras</li>
                 <li>Cell Phones & Accessories</li>
-                <li>Cell Phones & Accessories</li>
-                <li>Cell Phones & Accessories</li>
-                <li>Cell Phones & Accessories</li>
-                <li>Cell Phones & Accessories</li>
-                <li>Cell Phones & Accessories</li>
-                <li>Cell Phones & Accessories</li>
-                <li>Cell Phones & Accessories</li>
+                <li>Wearable Technology</li>
               </ul>
             </div>
 
@@ -231,11 +231,11 @@ export default function page() {
           </div>
 
           {/* Category List */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 md:w-1/4 lg:w-1/5">
             <h3 className="border border-t-0 border-x-0 border-neutral/40 py-1.5 md:hidden">
               All Categories
             </h3>
-            <div className="grid grid-cols-1 gap-4 justify-between text-neutral">
+            <div className="grid grid-cols-1 gap-2 items-center justify-between text-neutral">
               {AllCategoryList.map((category) => (
                 <CategoryList
                   key={category.id}

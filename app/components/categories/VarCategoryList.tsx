@@ -16,9 +16,12 @@ export default function ({ name, isOpen, setIsOpen }: VarCategoryListProps) {
       onClick={() => setIsOpen?.(false)}
       className="relative flex justify-between w-full items-center gap-2 text-brand hover:bg-neutral/16 rounded-md py-1 pl-6 pr-4"
     >
-      <p className=" ">| {name}</p>
+      <div className="flex items-baseline gap-2">
+        <p>|</p>
+        <p className="text-left">{name}</p>
+      </div>
       {/* <img src={imageSrc} alt={name} width={8} height={24} className="scale-x-[-1] "/> */}
-      <RiArrowRightSLine className="text-normal" />
+      <RiArrowRightSLine className="text-normal rotate-90" />
     </button>
   );
 }

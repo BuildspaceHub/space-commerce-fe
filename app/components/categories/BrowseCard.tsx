@@ -10,7 +10,7 @@ interface BrowseCardProps {
 
 export default function BrowseCard({name, imageSrc}: BrowseCardProps) {
   return (
-      <div className="flex flex-col items-center gap-2 bg-neutral/3 hover:bg-neutral/16 rounded-md p-4 w-42.75 h-32.25]">
+      <div className="flex flex-col items-center gap-4 bg-neutral/3 hover:bg-neutral/16 rounded-md p-4 w-42.75 h-32.25] md:gap-x-4">
         <img
           src={imageSrc}
           alt={name} 
