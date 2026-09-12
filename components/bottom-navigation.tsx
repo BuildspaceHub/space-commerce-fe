@@ -2,21 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Icon, type IconName } from "./icons";
-
-export type NavigationItem = {
-  href: string;
-  label: string;
-  icon: IconName;
-};
-
-export const navigationItems: readonly NavigationItem[] = [
-  { href: "/", label: "Home", icon: "home" },
-  { href: "/categories", label: "Categories", icon: "categories" },
-  { href: "/wishlist", label: "Wishlist", icon: "wishlist" },
-  { href: "/cart", label: "Cart", icon: "cart" },
-  { href: "/account", label: "Account", icon: "account" },
-];
+import { Icon } from "./icons";
+import { navigationItems } from "@/constants/nav";
 
 function isActiveRoute(pathname: string, href: string) {
   return href === "/" ? pathname === href : pathname.startsWith(href);
@@ -26,8 +13,11 @@ export function BottomNavigation() {
   const pathname = usePathname();
 
   return (
-    <nav aria-label="Primary navigation" className="fixed inset-x-0 bottom-0 z-50 border-t border-[#dddddd] bg-white pb-[env(safe-area-inset-bottom)] md:hidden">
-      <div className="mx-auto grid h-[72px] max-w-[393px] grid-cols-5">
+    <nav
+      aria-label="Primary navigation"
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-[#dddddd] bg-white pb-[env(safe-area-inset-bottom)] md:hidden"
+    >
+      <div className="mx-auto grid h-18 max-w-98.25 grid-cols-5">
         {navigationItems.map(({ href, label, icon }) => {
           const active = isActiveRoute(pathname, href);
           return (

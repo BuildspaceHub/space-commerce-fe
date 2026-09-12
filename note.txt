@@ -1,0 +1,3 @@
+Frontend flow
+
+page (Login) ====> hook (useLogin) ===> service (login.ts) ===> backend (/api/v1/aut/login)
